@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mami.mapper.VaccineMapper" >
+  <resultMap id="BaseResultMap" type="com.mami.bean.Vaccine" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="freq_num" property="freqNum" jdbcType="INTEGER" />
+    <result column="freq_unit" property="freqUnit" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="usage" property="usage" jdbcType="VARCHAR" />
+    <result column="intro" property="intro" jdbcType="LONGVARCHAR" />
+    <result column="atten" property="atten" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, freq_num, freq_unit, age, usage, state, intro, atten
+  </sql>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from vaccine
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+</mapper>
