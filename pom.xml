@@ -6,7 +6,6 @@
 	<artifactId>mami</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
 	<name>mami</name>
 	<url>http://maven.apache.org</url>
 
@@ -167,6 +166,8 @@
 
 	
 	<build>
+		<!-- 生成war文件的文件名 -->
+		<finalName>unitools</finalName>
 		<plugins>
 
 			<plugin>
@@ -202,5 +203,15 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<!-- 有些项目用eclipse生成war可以运行，用maven确不可以。eclipse记录了所有文件的发布路径，maven单独用的时候，需要配置好资源文件的发布路径哟 -->
+		<resources>
+            <resource>
+                <directory>src/main/resourse</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
 	</build>
 </project>
