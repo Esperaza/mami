@@ -167,7 +167,7 @@
 	
 	<build>
 		<!-- 生成war文件的文件名 -->
-		<finalName>unitools</finalName>
+		<finalName>mami</finalName>
 		<plugins>
 
 			<plugin>
