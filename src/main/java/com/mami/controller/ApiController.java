@@ -23,4 +23,11 @@ public class ApiController {
 		List<Doctor> doctors = doctorService.getAllDoctor();
 		return ResultMap.success(doctors);
 	}
+	
+
+	@RequestMapping(value = "/test" , method = RequestMethod.GET)
+	@ResponseBody
+	public ResultMap test(){	
+		return ResultMap.success("hello word");
+	}
 }

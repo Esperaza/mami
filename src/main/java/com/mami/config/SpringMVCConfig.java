@@ -26,12 +26,6 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter {
 		registry.viewResolver(irvr);
 	}
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
-		registry.addResourceHandler("/static/**", "/upload/**").addResourceLocations("/static/", "/upload/");
-
-	}
 
 	// 设置StringHttpMessageConverter
 	@Override

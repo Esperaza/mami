@@ -39,14 +39,5 @@ public class PropertiesConfig {
 
         return conversionService;
     }
-    
-    @Bean
-    public MultipartResolver multipartResolver(){
-    	CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-    	resolver.setMaxUploadSize(104857600L);
-    	resolver.setMaxInMemorySize(4096);
-    	resolver.setDefaultEncoding("UTF-8");
-    	return resolver;
-    }
-    
+
 }
